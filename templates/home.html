@@ -1,0 +1,120 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{%static 'css/style4.css'%}">
+  
+	
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- PRESS THE MENU BUTTON TO TRIGGER ANIMATION -->
+<!-- PRESS PLAY BUTTON TO LISTEN THE DEMO SONG -->
+
+<!-- As seen on: "https://dribbble.com/shots/2144866-Day-5-Music-Player-Rebound/" -->
+
+<!-- THANK YOU! -->
+
+	<article class="screen">
+	<input type="checkbox" value="None" id="magicButton" name="check" />
+	<label class="main" for="magicButton"></label>
+
+	<div class="coverImage"></div>
+	
+	<div class="bodyPlayer"></div>
+
+	<table class="list">
+		<tr class="song">
+		<td class="nr">
+			<h5>1<h5></td>
+							<td class="title"><h6 id="0">Chakkori<h6></td>
+							<td class="length"><h5>5:38<h5></td>
+							<td><input type="checkbox" id="heart"/><label class="zmr" for="heart"></label></td>
+						</tr>
+					
+						<tr class="song">
+							<td class="nr"><h5>2<h5></td>
+							<td class="title"><h6 id ="1">Dusk Till Dawn<h6></td>
+							<td class="length"><h5>3:55<h5></td>
+							<td><input type="checkbox" id="heart1" checked /><label class="zmr" for="heart1"></label></td>
+						</tr>
+					
+						<tr class="song">
+							<td class="nr"><h5>3<h5></td>
+							<td class="title"><h6 id="2">Aromale<h6></td>
+							<td class="length"><h5>5:45<h5></td>
+							<td><input type="checkbox" id="heart2"/><label class="zmr" for="heart2"></label></td>
+						</tr>
+					
+						<tr class="song">
+							<td class="nr"><h5>4<h5></td>
+							<td class="title"><h6 id="3">Marachipomanna<h6></td>
+							<td class="length"><h5>4:18<h5></td>
+							<td><input type="checkbox" id="heart3" checked /><label class="zmr" for="heart3"></label></td>
+						</tr>
+						
+						<tr class="song">
+							<td class="nr"><h5>5<h5></td>
+							<td class="title"><h6 id="4">Let Me<h6></td>
+							<td class="length"><h5>4:09<h5></td>
+							<td><input type="checkbox" id="heart4"/><label class="zmr" for="heart4"></label></td>
+						</tr>
+						
+						<tr class="song">
+							<td class="nr"><h5>6<h5></td>
+							<td class="title"><h6 id="5">Pillow Talk<h6></td>
+							<td class="length"><h5>4:13<h5></td>
+							<td><input type="checkbox" id="heart5"/><label class="zmr" for="heart5"></label></td>
+						</tr>
+						
+						
+						
+					</table>
+					
+					<div class="shadow"></div>
+					
+					<div class="bar"></div>
+					
+					<div class="info">
+						<h4 id="test">Chakkori</h4>
+					</div> 
+				
+	<audio preload="auto" id="audio" src="{% static 'audio/Chakkori.mp3' %}"></audio>
+	<audio preload="auto" id="audio1" src="{% static 'audio/DuskTillDawn.mp3' %}"></audio>
+	<audio preload="auto" id="audio2" src="{% static 'audio/Aromale.mp3' %}"></audio>
+	<audio preload="auto" id="audio3" src="{% static 'audio/Marachipomanna.mp3' %}"></audio>
+	<audio preload="auto" id="audio4" src="{% static 'audio/Zayn LetME.mp3' %}"></audio>
+	<audio preload="auto" id="audio5" src="{% static 'audio/Zayn PillowTalk.mp3' %}"></audio>
+
+
+
+
+	
+	<!--<source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.ogg"> -->
+	
+					<table class="player">
+						<td><input type="checkbox" id="backward" onclick="prev()"/><label  class="backward" for="backward"></label></td>
+						<td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"/><label class="play" for="play"></label></td>
+						<td><input type="checkbox" id="forward" onclick="next()"/><label class="forward" for="forward"></label></td>
+					</table>
+					
+					<table class="footer">
+						<td><input type="checkbox" id="love" checked /><label class="love" for="love"></label></td>
+						<td><input type="checkbox" id="shuffle"/><label class="shuffle" for="shuffle"></label></td>
+						<td><input type="checkbox" id="repeat" checked /><label class="repeat" for="repeat"></label></td>
+						<td><input type="checkbox" id="options"/><label class="options" for="options"></label></td>
+					</table>
+					
+					<div class="current"><h2 id="i">Chakkori</h2></div>
+					
+				
+			</article>
+	<!-- partial -->
+	<script src= 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' ></script><script  src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>
